@@ -1,0 +1,16 @@
+/docs  -> Swagger
+/redoc -> ReDoc
+/get?this=2&this_also=23
+
+Dependency injection 
+Testing - 100 % coverage
+
+Query parameters - Any function parameters not part of the path
+
+    Set Optional parameters - 
+
+    @app.get('/blog/{id}/comments/{comment_id}')
+    def get_comment(id: int, comment_id: int, 
+        valid: bool=True, username: Optional[str]=None):
+        return{'message': (f'blog_id {id} comment_id'
+            f'{comment_id} username {username}')}
